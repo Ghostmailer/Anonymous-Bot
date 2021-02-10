@@ -27,6 +27,11 @@ DEFAULT_START = ("Hi, I am ANONYMOUS SENDER BOT.\n\n"
                  "Please Support Us\n"
                  "By Joining the Support Group👇👇")
 
+START_IMG = os.environ.get('START_IMG', None)
+if START_IMG is None:
+    img = "https://telegra.ph/file/fc734b227985a1524e715.jpg"
+else:
+  img = START_IMG
 
 if Credentials.START_MESSAGE is not None:
   START_TEXT = Credentials.START_MESSAGE
